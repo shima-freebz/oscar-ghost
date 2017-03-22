@@ -1,0 +1,9 @@
+description "Ghost blog"
+author
+start on runlevel [2345]
+stop on runlevel [!2345]
+respawn
+umask 022
+
+chdir /var/www/node/gh.199c.red/
+exec forever start index.js
